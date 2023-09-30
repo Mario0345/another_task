@@ -20,7 +20,7 @@ ProdResp _$ProdRespFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$ProdResp {
-  List<dynamic> get prods => throw _privateConstructorUsedError;
+  List<Product> get products => throw _privateConstructorUsedError;
   int get total => throw _privateConstructorUsedError;
   int get skip => throw _privateConstructorUsedError;
   int get limit => throw _privateConstructorUsedError;
@@ -36,7 +36,7 @@ abstract class $ProdRespCopyWith<$Res> {
   factory $ProdRespCopyWith(ProdResp value, $Res Function(ProdResp) then) =
       _$ProdRespCopyWithImpl<$Res, ProdResp>;
   @useResult
-  $Res call({List<dynamic> prods, int total, int skip, int limit});
+  $Res call({List<Product> products, int total, int skip, int limit});
 }
 
 /// @nodoc
@@ -52,16 +52,16 @@ class _$ProdRespCopyWithImpl<$Res, $Val extends ProdResp>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? prods = null,
+    Object? products = null,
     Object? total = null,
     Object? skip = null,
     Object? limit = null,
   }) {
     return _then(_value.copyWith(
-      prods: null == prods
-          ? _value.prods
-          : prods // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+      products: null == products
+          ? _value.products
+          : products // ignore: cast_nullable_to_non_nullable
+              as List<Product>,
       total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
@@ -86,7 +86,7 @@ abstract class _$$ProdRespImplCopyWith<$Res>
       __$$ProdRespImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({List<dynamic> prods, int total, int skip, int limit});
+  $Res call({List<Product> products, int total, int skip, int limit});
 }
 
 /// @nodoc
@@ -100,16 +100,16 @@ class __$$ProdRespImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? prods = null,
+    Object? products = null,
     Object? total = null,
     Object? skip = null,
     Object? limit = null,
   }) {
     return _then(_$ProdRespImpl(
-      prods: null == prods
-          ? _value._prods
-          : prods // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>,
+      products: null == products
+          ? _value._products
+          : products // ignore: cast_nullable_to_non_nullable
+              as List<Product>,
       total: null == total
           ? _value.total
           : total // ignore: cast_nullable_to_non_nullable
@@ -130,22 +130,22 @@ class __$$ProdRespImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$ProdRespImpl implements _ProdResp {
   _$ProdRespImpl(
-      {final List<dynamic> prods = const [],
+      {final List<Product> products = const [],
       this.total = 0,
       this.skip = 0,
       this.limit = 0})
-      : _prods = prods;
+      : _products = products;
 
   factory _$ProdRespImpl.fromJson(Map<String, dynamic> json) =>
       _$$ProdRespImplFromJson(json);
 
-  final List<dynamic> _prods;
+  final List<Product> _products;
   @override
   @JsonKey()
-  List<dynamic> get prods {
-    if (_prods is EqualUnmodifiableListView) return _prods;
+  List<Product> get products {
+    if (_products is EqualUnmodifiableListView) return _products;
     // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(_prods);
+    return EqualUnmodifiableListView(_products);
   }
 
   @override
@@ -160,7 +160,7 @@ class _$ProdRespImpl implements _ProdResp {
 
   @override
   String toString() {
-    return 'ProdResp(prods: $prods, total: $total, skip: $skip, limit: $limit)';
+    return 'ProdResp(products: $products, total: $total, skip: $skip, limit: $limit)';
   }
 
   @override
@@ -168,7 +168,7 @@ class _$ProdRespImpl implements _ProdResp {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$ProdRespImpl &&
-            const DeepCollectionEquality().equals(other._prods, _prods) &&
+            const DeepCollectionEquality().equals(other._products, _products) &&
             (identical(other.total, total) || other.total == total) &&
             (identical(other.skip, skip) || other.skip == skip) &&
             (identical(other.limit, limit) || other.limit == limit));
@@ -177,7 +177,7 @@ class _$ProdRespImpl implements _ProdResp {
   @JsonKey(ignore: true)
   @override
   int get hashCode => Object.hash(runtimeType,
-      const DeepCollectionEquality().hash(_prods), total, skip, limit);
+      const DeepCollectionEquality().hash(_products), total, skip, limit);
 
   @JsonKey(ignore: true)
   @override
@@ -195,7 +195,7 @@ class _$ProdRespImpl implements _ProdResp {
 
 abstract class _ProdResp implements ProdResp {
   factory _ProdResp(
-      {final List<dynamic> prods,
+      {final List<Product> products,
       final int total,
       final int skip,
       final int limit}) = _$ProdRespImpl;
@@ -204,7 +204,7 @@ abstract class _ProdResp implements ProdResp {
       _$ProdRespImpl.fromJson;
 
   @override
-  List<dynamic> get prods;
+  List<Product> get products;
   @override
   int get total;
   @override
